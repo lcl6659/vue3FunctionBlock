@@ -15,6 +15,12 @@ const router = createRouter({
       meta: {},
       component: () => import("../views/listDragSort/index.vue"),
     },
+    {
+      path: "/wordPop",
+      name: "wordPop",
+      meta: {},
+      component: () => import("../views/wordPop/index.vue"),
+    },
   ]
 });
 
