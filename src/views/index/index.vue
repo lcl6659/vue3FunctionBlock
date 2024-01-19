@@ -1,10 +1,21 @@
 <template>
-  <div>
+  <div class="index-container">
     <router-link to="/listDragSort">列表拖拽排序</router-link>
     <router-link to="/wordPop">聊天气泡框</router-link>
   </div>
 </template>
 
 <style lang="less" scoped>
-
+.index-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > a {
+    line-height: 1.8;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}
 </style>
