@@ -61,7 +61,7 @@ export default defineComponent({
           htmlText = htmlText.replaceAll(boldText, `<>${boldText}</>`);
         }
       });
-      htmlText = htmlText.replaceAll("<>", `<span style="font-weight: 800;">`);
+      htmlText = htmlText.replaceAll("<>", `<span style="font-weight: 900;">`);
       htmlText = htmlText.replaceAll("</>", `</span>`);
       htmlText = htmlText.replaceAll("\n", `<br />`);
       return htmlText;
@@ -113,8 +113,8 @@ export default defineComponent({
     }
   }
   span {
-    font-size: 18px;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 1.4;
   }
   &.need-bubble {
     background-color: #fff;

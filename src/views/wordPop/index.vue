@@ -70,12 +70,12 @@ export default defineComponent({
   },
   setup() {
     const wordPopConfigData = ref({
-      text: "this is a cat. no this is a dog!\nthis is banana",
-      boldTexts: ["cat", "dog"], // 加粗的文字
+      text: "2024年，你有什么打算？\n我准备回老家了！",
+      boldTexts: ["2024", "回老家"], // 加粗的文字
       showHorn: true, // 显示对话图标
       arrowPosition: false, // 上下
       arrowFlip: false, // 左右
-      arrowOffsetX: -40, // 箭头偏移
+      arrowOffsetX: 0, // 箭头偏移
     });
 
     const boldText = ref("");
