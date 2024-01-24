@@ -54,15 +54,24 @@ export default defineComponent({
       }
     });
 
+    // 将字符串编码为ArrayBuffer格式
+    const getMessageEncoding = (text: string) => {
+      let enc = new TextEncoder();
+      return enc.encode(text);
+    }
+
     const textHtml = computed(() => {
       let htmlText = wordPopConfigData.value.text;
+      const codeText = getMessageEncoding(htmlText).toString();
+      const spanStart = `<${codeText}>`;
+      const spanEnd = `<${codeText}/>`;
       wordPopConfigData.value.boldTexts.forEach(boldText => {
         if (boldText) {
-          htmlText = htmlText.replaceAll(boldText, `<>${boldText}</>`);
+          htmlText = htmlText.replaceAll(boldText, `${spanStart}${boldText}${spanEnd}`);
         }
       });
-      htmlText = htmlText.replaceAll("<>", `<span style="font-weight: 900;">`);
-      htmlText = htmlText.replaceAll("</>", `</span>`);
+      htmlText = htmlText.replaceAll(spanStart, `<span style="font-weight: 900;">`);
+      htmlText = htmlText.replaceAll(spanEnd, `</span>`);
       htmlText = htmlText.replaceAll("\n", `<br />`);
       return htmlText;
     });
