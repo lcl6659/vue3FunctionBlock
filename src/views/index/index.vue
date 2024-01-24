@@ -2,6 +2,7 @@
   <div class="index-container">
     <router-link to="/listDragSort">列表拖拽排序</router-link>
     <router-link to="/wordPop">聊天气泡框</router-link>
+    <router-link to="/imageResolutionComparison">图片大小调整前后对比</router-link>
   </div>
 </template>
 
@@ -13,7 +14,7 @@
   justify-content: center;
   align-items: center;
   > a {
-    line-height: 1.8;
+    line-height: 2;
     font-size: 18px;
     text-decoration: underline;
   }

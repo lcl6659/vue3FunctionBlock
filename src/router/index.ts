@@ -21,6 +21,12 @@ const router = createRouter({
       meta: {},
       component: () => import("../views/wordPop/index.vue"),
     },
+    {
+      path: "/imageResolutionComparison",
+      name: "imageResolutionComparison",
+      meta: {},
+      component: () => import("../views/imageResolutionComparison/index.vue"),
+    },
   ]
 });
 
