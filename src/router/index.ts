@@ -27,6 +27,24 @@ const router = createRouter({
       meta: {},
       component: () => import("../views/imageResolutionComparison/index.vue"),
     },
+    {
+      path: "/tensorflow-mobilenet",
+      name: "tensorflowMobilenet",
+      meta: {},
+      component: () => import("../views/tensorFlow/mobileNet/index.vue"),
+    },
+    {
+      path: "/cropPngImage",
+      name: "cropPngImage",
+      meta: {},
+      component: () => import("../views/cropPngImage/index.vue"),
+    },
+    {
+      path: "/svgPolygonTopath",
+      name: "svgPolygonTopath",
+      meta: {},
+      component: () => import("../views/svgPolygonTopath/index.vue"),
+    },
   ]
 });
 
